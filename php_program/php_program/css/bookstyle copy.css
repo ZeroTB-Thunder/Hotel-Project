@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+  
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition:all .2s linear;
+}
+
+:root{
+    --main-color:#e45428;
+    --sub-color:#DCC69C;
+    --white:#fff;
+    --border:.1rem solid rgba(220, 198, 156, .3);
+    
+}
+
+.background{
+    width:100%;
+    height:100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), #550c45), url(beach.jpg);
+    background-position: center;
+    background-size:cover;
+    
+}
+
+body{
+    margin: 0;
+}
+
+
+
+section{
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    
+}
+
+
+
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--main-color);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    width: 100%;
+}
+
+ .btn:hover{
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.reservation form{
+    border: var(--border);
+    padding: 2rem;
+    border-radius: 1rem;
+    background:transparent ;
+    border-color: black;
+    margin-left: 100px;
+}
+
+.reservation form .flex{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.reservation form h3{
+    background-color: var(--sub-color);
+    color: var(--main-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    padding: 1.2rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.reservation form .flex .box,.boxb{
+    flex: 1 1 450px;
+    position: relative;
+    
+}
+
+.box1{
+    position: relative;
+}
+
+.boxb{
+    height: 200px;
+}
+
+.reservation form .flex .box p{
+    font-size: 1.8rem;
+    color: var(--sub-color);
+}
+
+.reservation form .flex .box .input{
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    margin-bottom: 30px;
+    border-bottom: var(--border);
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.8rem;
+    width: 100% ;
+    background: transparent;
+    outline: 0;
+    border: 1px solid var(--main-color);
+}
+
+.reservation form .flex .box1{
+    flex: 1 1 900px;    
+
+}
+
+
+.reservation form .flex .box1 .note{
+    width: 98%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid var(--main-color);
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+}
+
+.reservation form .flex .box input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+}
+
+label{
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 31.5px;
+    padding-left: 5px;
+    color:#ffffff;
+    cursor:text;
+    font-size: 25px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.box1 label{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    padding-left: 5px;
+    color:#ffffff;
+    cursor:text;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.reservation form .flex .box .input:focus~label,
+.reservation form .flex .box .input:valid~label,
+.date1{
+    top:-45px;
+    font-size: 25px;
+}
+
+.reservation form .flex .box1 textarea:focus~label,
+.reservation form .flex .box1 textarea:valid~label{
+    top:-40px;
+    font-size: 25px;
+}
+
+.HotelB{
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top:40%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: #e45428;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(241, 8, 8, 0.3);
+}
+
+th,td{
+    padding: 10px 15px;
+}
+
+th{
+    background: #cc420b;
+    color:#fff;
+    text-transform: uppercase;
+}
+
+tr:nth-child(odd){
+    background-color: darkgrey;
+
+}
+
+.booking_room{
+    width: 50px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: var(--sub-color);
+}
+
+header{
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    background: wheat;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 9%;
+}
+
+header .logo{
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    text-transform: uppercase;
+}
+
+header .logo span{
+    color: orange;
+}
+
+header .navbar a{
+    color: white;
+    font-size: 20px;
+    margin: 8px;
+}
+
+header .navbar a:hover{
+    color: orange;
+}
+
+#menu-bar{
+    color:rgb(254, 250, 250);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 30px;
+    padding: 5px 12px;
+    cursor: pointer;
+    display: none;
+}
+
+.footer{
+    background: rgb(60, 59, 59);
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px
+}
+
+.footer .box-container .box{
+    padding: 10px 0;
+    flex:1 1 250px;
+}
+
+.footer .box-container .box h3{
+    font-size: 25px;
+    padding: 7px 0;
+    color: rgb(255, 253, 253);
+}
+
+.footer .box-container .box p{
+    font-size: 15px;
+    padding: 7px 0;
+    color: rgb(255, 255, 255);
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 15px;
+    padding: 7px 0;
+    color: rgb(255, 255, 255);
+}
+
+.footer .box-container .box a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+
+.HotelB tbody tr th strong{
+    font-family: 'Oswald', sans-serif;
+    box-shadow: 2px 2px 2px #fff;
+}
+
+tr td strong{
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Oswald', sans-serif;  
+}

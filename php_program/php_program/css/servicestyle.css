@@ -1,0 +1,91 @@
+html{
+  background-color: #d9d1d0;
+}
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: green;
+    border-radius: 5px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    box-shadow: -6px 7px 9px;
+    background-size: 50%;
+    background-position: center;
+
+  }
+
+  h {
+    display: flex;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Cinzel', serif;
+    color : rgb(163, 135, 8);
+    text-shadow: 1px 1px 1px rgb(100, 50, 50) ;
+  }
+  
+  nav {
+    list-style: none;
+    padding: 1rem;
+    
+  
+  }
+    
+  nav a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  h5 {
+    margin-bottom: 100px;
+  }
+
+  nav a:hover {
+    background-color: #ccc;
+    
+  }
+  h2{
+    padding-left: 15px;
+  }
+  body{
+  background-color: #d9d1d0;
+  
+ 
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    margin: 20px; 
+}
+
+
+
+  
+  footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: green;
+    border-radius: 5px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    box-shadow: -6px 7px 9px;
+    background-image: url(https://freefrontend.com/assets/img/css-background-patterns/css3-gradient-pattern.png);
+    background-size: 50%;
+    background-position: center;
+  }
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+  .menu-item {
+    margin-bottom: 10px;
+}
