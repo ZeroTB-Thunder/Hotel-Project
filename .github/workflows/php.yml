@@ -48,6 +48,10 @@ jobs:
       run: |
         echo "Deploying to production environment..."
         # Các bước deploy lên môi trường production
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./php_program/php_program
 
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
