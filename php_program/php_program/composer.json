@@ -1,6 +1,6 @@
 {
-  "name": "hotel_project",
-  "description": "Hotel_room_management",
+  "name": "hotelproject",
+  "description": "Hotelroommanagement",
   "require": {
     "php": "^8.0",
     "laravel/framework": "^10.0"
