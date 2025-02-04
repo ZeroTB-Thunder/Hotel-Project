@@ -1,5 +1,5 @@
 {
-  "name": "hotelproject",
+  "name": "myvendor/hotelproject",
   "description": "Hotelroommanagement",
   "require": {
     "php": "^8.0",
