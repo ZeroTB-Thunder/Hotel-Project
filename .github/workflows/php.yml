@@ -24,7 +24,10 @@ jobs:
           coverage: none
 
     - name: Install dependencies
-      run: composer install --no-progress --no-suggest --prefer-dist --optimize-autoloader
+      run: |
+          cd php_program/php_program
+          composer install --no-dev --optimize-autoloader
+
       
     - name: Run tests (for feature and hotfix)
       run: |
