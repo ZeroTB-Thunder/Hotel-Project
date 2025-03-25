@@ -3,7 +3,7 @@
         'name' => 'hotel/bookingsystem',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c93cc56643127dcd8322674fa1552c581c6e2141',
+        'reference' => '97dd3dcac662526bef96c506dee77a4bcdfbaa41',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -19,6 +19,12 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'facebook/webdriver' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
         'filp/whoops' => array(
             'pretty_version' => '2.17.0',
             'version' => '2.17.0.0',
@@ -31,7 +37,7 @@
         'hotel/bookingsystem' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c93cc56643127dcd8322674fa1552c581c6e2141',
+            'reference' => '97dd3dcac662526bef96c506dee77a4bcdfbaa41',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -99,6 +105,15 @@
             'install_path' => __DIR__ . '/../phar-io/version',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'php-webdriver/webdriver' => array(
+            'pretty_version' => '1.15.2',
+            'version' => '1.15.2.0',
+            'reference' => '998e499b786805568deaf8cbf06f4044f05d91bf',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../php-webdriver/webdriver',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'phpunit/php-code-coverage' => array(
             'pretty_version' => '9.2.32',
@@ -365,7 +380,16 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',
             'aliases' => array(),
-            'dev_requirement' => true,
+            'dev_requirement' => false,
+        ),
+        'symfony/process' => array(
+            'pretty_version' => 'v6.0.19',
+            'version' => '6.0.19.0',
+            'reference' => '2114fd60f26a296cc403a7939ab91478475a33d4',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/process',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'symfony/service-contracts' => array(
             'pretty_version' => 'v3.0.2',

@@ -83,3 +83,16 @@
     margin: 8px 63px;
     width:80%;
 }
+.form-container form .error-msg {
+    background: rgb(206, 87, 87);
+    color: rgb(231, 225, 225);
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 17px;
+    margin: 0 63px 8px 63px; /* Di chuyển xuống dưới một chút */
+    width: 50%;
+    position: absolute; /* Vị trí tuyệt đối */
+    top: 140px; /* Đưa lên trên trường username */
+    left: 45%;
+    transform: translateX(-50%); /* Để căn giữa */
+}

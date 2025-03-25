@@ -68,24 +68,10 @@ function validatePeoples(){
     return true;
 }
 
-function validateroom(){
-    var room = 0;
-    var sroom = document.getElementById('sroom').value;
-    var droom = document.getElementById('droom').value;
-    var vroom = document.getElementById('vroom').value;
-    room = room + sroom;
-    room = room + droom;
-    room = room + vroom;
 
-    if(room == 0){
-        roomError.innerHTML = 'Room must be booked!';
-        return false;
-    }
-    return true;
-}
 
 function validateForm(){
-    if(!validateName() || !validateNumber() || !validateEmail() || !validateroom() || validateroom()){
+    if(!validateName() || !validateNumber() || !validateEmail() ){
         submitError.style.display = 'block';
           submitError.innerHTML = "Please fix error before submit!!!";
           setTimeout(function(){submitError.style.display = 'none';}, 3000);
@@ -98,6 +84,41 @@ function someFunc(){
     validateEmail();
     validateNumber();
     validatePeoples();
-    validateroom();
     return validateForm();
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector("form").onsubmit = function (event) {
+        // Lấy giá trị từ các input
+        let name = document.getElementById("book-name").value;
+        let email = document.getElementById("book-email").value;
+        let phone = document.getElementById("book-number").value;
+        let peoples = document.getElementById("book-peoples").value;
+        let checkIn = document.getElementById("book-checkin").value;
+        let checkOut = document.getElementById("book-checkout").value;
+
+        // Lấy danh sách phòng đã chọn
+        let selectedRooms = [];
+        document.querySelectorAll(".room-checkbox:checked").forEach((room) => {
+            selectedRooms.push(room.dataset.roomNumber);
+        });
+
+        // Hiển thị thông tin nhập vào
+        let message = `Bạn đã nhập:\n
+        - Họ và tên: ${name}\n
+        - Email: ${email}\n
+        - Số điện thoại: ${phone}\n
+        - Số người: ${peoples}\n
+        - Ngày nhận phòng: ${checkIn}\n
+        - Ngày trả phòng: ${checkOut}\n
+        - Phòng đã chọn: ${selectedRooms.length > 0 ? selectedRooms.join(", ") : "Chưa chọn"}\n\n
+        Bạn có muốn tiếp tục đặt phòng?`;
+
+        // Nếu người dùng không đồng ý, chặn form submit
+        if (!confirm(message)) {
+            event.preventDefault();
+        }
+    };
+});
+

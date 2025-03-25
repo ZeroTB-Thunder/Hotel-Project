@@ -60,7 +60,7 @@ if(isset($_POST['send'])){
         <a href="booking.php">Booking</a>
         <a href="#rooms">Rooms</a>
         <a href="#service">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="history.php">History</a>
         <a href="logout.php">Logout</a>
     </nav>
     </header>

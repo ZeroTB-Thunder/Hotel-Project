@@ -11,5 +11,8 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
+    },
+    "require": {
+        "php-webdriver/webdriver": "^1.15"
     }
 }
